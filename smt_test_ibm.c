@@ -23,7 +23,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* Program to test SMT performance on factorial and fibonnaci programs
  * Used to generate IBM POWER7 comparison results for
- * M. Lancaster, A hardware investigation of simultaneous multi-thrreading,
+ * M. Lancaster, A hardware investigation of simultaneous multi-threading,
  * October, 2013.
  * Untested on Intel SMT architectures due to my CPU not supporting HyperThreading
  * (i5-3570K).
