@@ -268,23 +268,23 @@ architecture Behavioral of smt_control_unit is
            when "00000111" =>		  
            when others =>
          end case;
-         if smt_thread_instruction(1) = "00000000" then
-           ADDER_A <= smt_thread_arg1(1);
-           ADDER_B <= smt_thread_arg2(1);
-           ADDR1   <= smt_thread_arg3(1);
-           DATA1   <= ADDER_S;
-           SET1    <= '1';
-           smt_thread_instruction_pointer(1) := increment_instruction_pointer(smt_thread_instruction_pointer(1));				
-         elsif smt_thread_instruction(1) = "00000001" then
-           MULTIPLIER_A <= smt_thread_arg1(1);
-           MULTIPLIER_B <= smt_thread_arg2(1);
-           ADDR1        <= smt_thread_arg3(1);
-           DATA1        <= MULTIPLIER_C;
-           SET1         <= '1';
-           smt_thread_instruction_pointer(1) := increment_instruction_pointer(smt_thread_instruction_pointer(1));			  
-         end if;
-       end case;
-     end if;
+			if smt_thread_instruction(1) = "00000000" then
+				ADDER_A <= smt_thread_arg1(1);
+				ADDER_B <= smt_thread_arg2(1);
+				ADDR1   <= smt_thread_arg3(1);
+				DATA1   <= ADDER_S;
+				SET1    <= '1';
+				smt_thread_instruction_pointer(1) := increment_instruction_pointer(smt_thread_instruction_pointer(1));				
+			elsif smt_thread_instruction(1) = "00000001" then
+			  MULTIPLIER_A <= smt_thread_arg1(1);
+			  MULTIPLIER_B <= smt_thread_arg2(1);
+			  ADDR1        <= smt_thread_arg3(1);
+			  DATA1        <= MULTIPLIER_C;
+			  SET1         <= '1';
+			  smt_thread_instruction_pointer(1) := increment_instruction_pointer(smt_thread_instruction_pointer(1));			  
+			end if;
+	 end case;
+	 end if;
    OUTADDR0 <= smt_thread_instruction_pointer(0);
 	 OUTADDR1 <= smt_thread_instruction_pointer(1);
 	 

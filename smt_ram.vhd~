@@ -32,23 +32,23 @@ use IEEE.NUMERIC_STD.ALL;
 entity smt_ram is
 	port 
 	(	
-    DATA0     : in  std_logic_vector(7 downto 0);
-    DATA1     : in  std_logic_vector(7 downto 0);
-    ADDR0     : in  std_logic_vector(7 downto 0);
-    ADDR1     : in  std_logic_vector(7 downto 0);
-    SET0      : in  std_logic := '0';
-    SET1      : in  std_logic := '0';
-    RAM_CLOCK : in  std_logic;
-    OUT0      : out std_logic_vector(7 downto 0);
-    OUT1      : out std_logic_vector(7 downto 0);
-    OUT2      : out std_logic_vector(7 downto 0);
-    OUT3      : out std_logic_vector(7 downto 0);
-    OUT4      : out std_logic_vector(7 downto 0);
-    OUT5      : out std_logic_vector(7 downto 0);
-    OUT6      : out std_logic_vector(7 downto 0);
-    OUT7      : out std_logic_vector(7 downto 0);
-    OUTADDR0  : in  std_logic_vector(7 downto 0);
-    OUTADDR1  : in  std_logic_vector(7 downto 0)
+		DATA0	: in std_logic_vector(7 downto 0);
+		DATA1	: in std_logic_vector(7 downto 0);
+		ADDR0	: in std_logic_vector(7 downto 0);
+		ADDR1	: in std_logic_vector(7 downto 0);
+		SET0	: in std_logic := '0';
+		SET1	: in std_logic := '0';
+		RAM_CLOCK		: in std_logic;
+		OUT0		 : out std_logic_vector(7 downto 0);
+		OUT1		 : out std_logic_vector(7 downto 0);
+		OUT2     : out std_logic_vector(7 downto 0);
+		OUT3     : out std_logic_vector(7 downto 0);
+		OUT4     : out std_logic_vector(7 downto 0);
+		OUT5     : out std_logic_vector(7 downto 0);
+		OUT6     : out std_logic_vector(7 downto 0);
+		OUT7     : out std_logic_vector(7 downto 0);
+		OUTADDR0 : in std_logic_vector(7 downto 0);
+		OUTADDR1 : in std_logic_vector(7 downto 0)
 	);
 	
 	type memory_t is array (255 downto 0) of std_logic_vector(7 downto 0);
