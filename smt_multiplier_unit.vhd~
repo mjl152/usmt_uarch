@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------------
+-- SMT multiplier unit
+-- Michael Lancaster <mjl152@uclive.ac.nz>
+-- 4 October 2013
+----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+use IEEE.NUMERIC_STD.ALL;
+
+-- Uncomment the following library declaration if instantiating
+-- any Xilinx primitives in this code.
+--library UNISIM;
+--use UNISIM.VComponents.all;
+
+entity smt_multiplier_unit is
+    Port ( MULTIPLIER_A : in   STD_LOGIC_VECTOR (7 downto 0);
+           MULTIPLIER_B : in   STD_LOGIC_VECTOR (7 downto 0);
+           MULTIPLIER_C : out  STD_LOGIC_VECTOR (7 downto 0));
+end smt_multiplier_unit;
+
+architecture Behavioral of smt_multiplier_unit is
+	signal result : std_logic_vector (15 downto 0);
+begin
+  result <= std_logic_vector (signed(MULTIPLIER_A) * signed (MULTIPLIER_B));
+  MULTIPLIER_C <= result(7 downto 0);
+
+end Behavioral;
+
